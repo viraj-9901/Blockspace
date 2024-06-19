@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Account from './pages/Account';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <Router>
+    <Route exact path='/'>
+      <App/>
+    </Route>
+    <Route path='/account'>
+      <Account/>
+    </Route>
+  </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
